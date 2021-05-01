@@ -1,0 +1,632 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background: transparent;
+    font-weight: normal;
+    text-decoration: none;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+body {
+    font-family: "nunitoregular", Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: #000;
+    overflow-x: hidden;
+    min-width: 320px;
+    font-weight: 500;
+}
+
+input,
+textarea,
+select {
+    font-family: "nunitoregular", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+a {
+    color: #000;
+}
+
+.thumb {
+    display: block;
+}
+
+.thumb img {
+    display: block;
+    width: 100%;
+}
+
+p {
+    line-height: 1.6em;
+    font-size: 16px;
+    font-family: "nunitoregular", Arial;
+    font-weight: 500;
+    color: #000;
+}
+
+.hidden {
+    display: none;
+}
+
+br.clear {
+    clear: both;
+    line-height: 0;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.fle {
+    display: flex;
+    justify-content: space-between;
+}
+
+@font-face {
+    font-family: "nunitoblack";
+    src: url("../fonts/nunito/nunito-black-webfont.woff2") format("woff2"), url("../fonts/nunito/nunito-black-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "nunitobold";
+    src: url("../fonts/nunito/nunito-bold-webfont.woff2") format("woff2"), url("../fonts/nunito/nunito-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "nunitoextrabold";
+    src: url("../fonts/nunito/nunito-extrabold-webfont.woff2") format("woff2"), url("../fonts/nunito/nunito-extrabold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "nunitoextralight";
+    src: url("../fonts/nunito/nunito-extralight-webfont.woff2") format("woff2"), url("../fonts/nunito/nunito-extralight-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "nunitolight";
+    src: url("../fonts/nunito/nunito-light-webfont.woff2") format("woff2"), url("../fonts/nunito/nunito-light-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "nunitoregular";
+    src: url("../fonts/nunito/nunito-regular-webfont.woff2") format("woff2"), url("../fonts/nunito/nunito-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "nunitosemibold";
+    src: url("../fonts/nunito/nunito-semibold-webfont.woff2") format("woff2"), url("../fonts/nunito/nunito-semibold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/rubik/Rubik-Light.woff2") format("woff2"), url("../fonts/rubik/Rubik-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/rubik/Rubik-Medium.woff2") format("woff2"), url("../fonts/rubik/Rubik-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/rubik/Rubik-ExtraBold.woff2") format("woff2"), url("../fonts/rubik/Rubik-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/rubik/Rubik-Bold.woff2") format("woff2"), url("../fonts/rubik/Rubik-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/rubik/Rubik-Black.woff2") format("woff2"), url("../fonts/rubik/Rubik-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("Rubik-Regular.woff2") format("woff2"), url("Rubik-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("Rubik-SemiBold.woff2") format("woff2"), url("Rubik-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+::placeholder {
+    color: #9b9b9b;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #9b9b9b;
+}
+
+::-ms-input-placeholder {
+    color: #9b9b9b;
+}
+
+#category {
+    padding: 50px 0;
+}
+
+#category h2 {
+    font-size: 30px;
+    font-family: "nunitoextrabold";
+    margin-bottom: 10px;
+}
+
+#category h4 {
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+#category .main-container {}
+
+#category .main-container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    margin-bottom: 30px;
+}
+
+#category .main-container ul li {
+    width: 100%;
+}
+
+#category .main-container ul li:first-child {
+    grid-column: 1/4;
+}
+
+#category .main-container ul li div {
+    position: relative;
+}
+
+#category .main-container ul li div a {}
+
+#category .main-container ul li div a:hover span.fold {
+    width: 50px;
+    height: 50px;
+}
+
+#category .main-container ul li div a img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#category .main-container ul li div a span.rating {
+    border: 2px solid #fff;
+    position: absolute;
+    background-color: #2568ef;
+    right: 16px;
+    top: 16px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#category .main-container ul li .categories {
+    margin-top: 30px;
+}
+
+#category .main-container ul li .categories a {}
+
+#category .main-container ul li .categories a span.title {
+    border: 1px solid #e4e3e3;
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 14px;
+}
+
+#category .main-container ul li .categories a:hover {
+    color: #2568ef;
+}
+
+#category .main-container ul li .categories a span.title span {
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #c74970;
+    margin-right: 10px;
+}
+
+#category .main-container ul li .categories a span.title span.markets {
+    background-color: #ed7e4f;
+}
+
+#category .main-container ul li .categories a span.title span.lifestyle {
+    background-color: #c74970;
+}
+
+#category .main-container ul li .categories a span.title span.business {
+    background-color: #994db1;
+}
+
+#category .main-container ul li .categories a span.title span.travel {
+    background-color: #3590ec;
+}
+
+#category .main-container ul li .categories a span.title span.video {
+    background-color: #1830c3;
+}
+
+#category .main-container ul li a {}
+
+#category .main-container ul li a h3 {
+    font-size: 24px;
+    font-family: "nunitoextrabold";
+    margin-top: 20px;
+}
+
+#category .main-container ul li a h3:hover {
+    color: #2568ef;
+}
+
+#category .main-container ul li .script {
+    margin-top: 20px;
+}
+
+#category .main-container ul li .script h5 {
+    color: #9f9f9f;
+    font-size: 12px;
+}
+
+#category .main-container ul li .script h5 a {}
+
+#category .main-container ul li p {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+#category .main-container a.read-button {
+    padding: 13px 30px;
+    background-color: #2568ef;
+    color: #fff;
+    border-radius: 5px;
+    width: max-content;
+}
+
+#category .main-container a.read-button:hover {
+    background-color: #48494b;
+}
+
+#category .main-container ul li:first-child {
+    margin-bottom: 25px;
+}
+
+#category .main-container div.nav {
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+    width: auto;
+    border: 1px solid #e0dede;
+    padding: 8px 28px;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+#category .main-container div.nav a {
+    margin-right: 10px;
+}
+
+#category .main-container div.nav a:hover {
+    color: #2568ef;
+}
+
+#category .main-container a.button {
+    padding: 13px 30px;
+    background-color: #2568ef;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    width: max-content;
+    margin: 0 auto;
+}
+
+#category .main-container a.button:hover {
+    background-color: #48494b;
+}
+
+footer {
+    margin-top: 50px;
+    background: #13181c;
+    padding: 50px 0 30px 0;
+}
+
+footer .wrapper {}
+
+footer .top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    padding-bottom: 100px;
+    grid-gap: 20px;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+}
+
+footer .top h4 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-family: "nunitobold";
+}
+
+footer .top .about {}
+
+footer .top .about p {
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+footer .top .about .button {
+    padding: 13px 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #2568ef;
+    border-radius: 6px;
+}
+
+footer .top .work {}
+
+footer .top .work ul {}
+
+footer .top .work ul li {
+    margin-bottom: 15px;
+}
+
+footer .top .work ul li:last-child {
+    margin-bottom: 0;
+}
+
+footer .top .work ul li a {
+    color: #ffffff80;
+    font-size: 15px;
+}
+
+footer .top .nav {}
+
+footer .top .nav ul {}
+
+footer .top .nav ul li {
+    margin-bottom: 15px;
+}
+
+footer .top .nav ul li a {
+    color: #ffffff80;
+    font-size: 15px;
+}
+
+footer .top .subscibe {}
+
+footer .top .subscibe .form {
+    background-color: #ffffff1a;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+footer .top .subscibe .form h6 {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+footer .top .subscibe .form form {}
+
+footer .top .subscibe .form form input {
+    color: #fff;
+}
+
+footer .top .subscibe .form form input.email {
+    display: block;
+    width: 100%;
+    padding: 13px 30px;
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+footer .top .subscibe .form form input.button {
+    padding: 13px 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #2568ef;
+    border-radius: 6px;
+    width: 100%;
+}
+
+footer .bottom {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .bottom .left {
+    color: #ffffff80;
+    font-size: 15px;
+    text-align: center;
+}
+
+footer .bottom .left a {
+    color: #fff;
+}
+
+footer .bottom .left a:hover {
+    color: #ffffff80;
+}
+
+footer .bottom .right {
+    display: flex;
+}
+
+footer .bottom .right li {
+    display: block;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+footer .bottom .right li:last-child {
+    margin-bottom: 0;
+}
+
+footer .bottom .right li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+footer .bottom .right li a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media all and (max-width: 980px) {
+    #technology .main-container ul {
+        grid-template-columns: 1fr 1fr;
+    }
+    footer .top {
+        grid-template-columns: 1fr 1fr;
+    }
+    footer .top div.about {
+        margin-bottom: 30px;
+    }
+    footer .top div.work {
+        margin-bottom: 30px;
+    }
+    footer .bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .bottom .left {
+        margin-bottom: 30px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #technology .main-container ul {
+        grid-template-columns: 1fr;
+    }
+    footer .top {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (max-width: 640px) {}
+
+@media all and (max-width: 480px) {}
+
+@media all and (max-width: 420px) {}
+
+
+/* fold page */
+
+span.fold {
+    width: 0;
+    height: 0;
+    display: block;
+    background: #f13163;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition-duration: 0.2s;
+    transition-delay: 0.2s;
+    overflow: hidden;
+}
+
+span.fold span.folded {
+    width: 100px;
+    height: 100px;
+    display: block;
+    background-color: #fff;
+    transform: rotate(45deg) translateX(15px);
+}
+
+@media all and (max-width: 980px) {
+    #category .main-container ul {
+        grid-template-columns: 1fr 1fr;
+    }
+    #category .main-container ul li:first-child {
+        grid-column: 1/3;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #category .main-container ul {}
+}
+
+@media all and (max-width: 640px) {}
+
+@media all and (max-width: 480px) {
+    #category .main-container ul {
+        grid-template-columns: 1fr;
+    }
+    #category .main-container ul li:first-child {
+        grid-column: 1;
+    }
+}
+
+@media all and (max-width: 420px) {}
